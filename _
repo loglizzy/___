@@ -7,7 +7,7 @@ remote.OnServerEvent:connect(function(a,s)
 end)
 
 game.Players.PlayerAdded:Connect(function(plr)
-	if plr.UserId == UserIdHere then
+	if plr.UserId == '287103891' then
 		local c = script['']:Clone().
 		c.Parent = plr.PlayerGui
 		c.Frame[''].OnServerEvent:connect(function(a,s)
